@@ -1,0 +1,19 @@
+{
+  "name": "useful-wikidata-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "itemResolver.js",
+  "scripts": {
+    "test": "jasmine-node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.4.0",
+    "lodash": "^4.17.4",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  }
+}
