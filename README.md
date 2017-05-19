@@ -3,7 +3,7 @@ Service to query the Wikidata API and SPARQL interface
 
 # Usage Examples
 
-```
+```javascript
 var WikidataService = require("./wikidataService.js");
 
 var wikidataService = new WikidataService();
