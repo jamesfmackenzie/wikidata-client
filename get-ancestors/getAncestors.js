@@ -1,7 +1,7 @@
 var GetParents = require("../get-parents/getParents.js");
 var getParents = new GetParents();
-var async = require('async');
-var _ = require('lodash');
+var async = require("async");
+var _ = require("lodash");
 
 var maxDepth;
 var retrievedItems = [];
@@ -25,7 +25,7 @@ GetAncestors.prototype.byId = function (id, callback, maxDepthParam) {
         rootItem = p;
         getAncestors(rootItem, 0);
     });
-}
+};
 
 function getAncestors(item, depth) {
 

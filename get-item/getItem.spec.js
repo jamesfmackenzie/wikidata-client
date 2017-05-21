@@ -1,6 +1,6 @@
-/*global describe, it, expect, jasmine */
+/*global describe, it, expect */
 
-var _ = require('lodash');
+var _ = require("lodash");
 
 describe("GetItem", function () {
 
@@ -37,9 +37,9 @@ describe("GetItem", function () {
                     expect(result.results.bindings).toBeDefined();
 
                     var games = result.results.bindings;
-                    var gameLabels = _.map(games, 'gameLabel.value');
+                    var gameLabels = _.map(games, "gameLabel.value");
 
-                    expect(gameLabels).toContain('Civilization III');
+                    expect(gameLabels).toContain("Civilization III");
                     done();
                 });
             });
@@ -54,7 +54,7 @@ function getName(json) {
     var labels = getPropertyValueOrLabel(labelProperty, valueKey, json);
 
     var enLabel = _.filter(labels, function (l) {
-        return l['xml:lang'] == 'en';
+        return l["xml:lang"] == "en";
     });
 
     if (enLabel && enLabel.length) {

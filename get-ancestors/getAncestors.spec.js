@@ -1,14 +1,8 @@
-/*global describe, it, expect, jasmine */
+/*global describe, it, expect */
 
 describe("GetAncestors", function () {
     var GetAncestors = require("./getAncestors.js");
     var getAncestors = new GetAncestors();
-
-    var expectedName = "Super Mario 64 DS";
-    var expectedParents = [{
-        id: 'http://www.wikidata.org/entity/Q7889',
-        name: 'video game'
-    }];
 
     describe("known Wikidata id without prefix", function () {
         var knownWikidataId = "Q1142888";

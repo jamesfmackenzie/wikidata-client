@@ -1,4 +1,4 @@
-/*global describe, it, expect, jasmine */
+/*global describe, it, expect */
 
 describe("GetParents", function () {
     var GetParents = require("./getParents.js");
@@ -6,10 +6,9 @@ describe("GetParents", function () {
 
     var expectedName = "Super Mario 64 DS";
     var expectedParents = [{
-        id: 'http://www.wikidata.org/entity/Q7889',
-        name: 'video game'
+        id: "http://www.wikidata.org/entity/Q7889",
+        name: "video game"
     }];
-
 
     describe("known Wikidata id without prefix", function () {
         var knownWikidataId = "Q1142888";

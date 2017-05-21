@@ -1,5 +1,5 @@
-var request = require('request');
-var _ = require('lodash');
+var request = require("request");
+var _ = require("lodash");
 
 var entityPrefix = "http://www.wikidata.org/entity/";
 
@@ -7,7 +7,7 @@ if (!String.prototype.format) {
     String.prototype.format = function () {
         var args = arguments;
         return this.replace(/{(\d+)}/g, function (match, number) {
-            return typeof args[number] != 'undefined' ?
+            return typeof args[number] != "undefined" ?
                 args[number] :
                 match;
         });
@@ -49,7 +49,7 @@ function getName(json) {
     var labels = getPropertyValueOrLabel(labelProperty, valueKey, json);
 
     var enLabel = _.filter(labels, function (l) {
-        return l['xml:lang'] == 'en';
+        return l["xml:lang"] == "en";
     });
 
     if (enLabel && enLabel.length) {
@@ -79,14 +79,14 @@ function getPropertyValueAndLabel(propertyKey, json) {
     var valueKey = "o";
     var labelKey = "oLabel";
 
-    var ids = _.map(getPropertyValueOrLabel(propertyKey, valueKey, json), 'value');
-    var names = _.map(getPropertyValueOrLabel(propertyKey, labelKey, json), 'value');
+    var ids = _.map(getPropertyValueOrLabel(propertyKey, valueKey, json), "value");
+    var names = _.map(getPropertyValueOrLabel(propertyKey, labelKey, json), "value");
 
     var result = [];
 
     var i = 0;
     _.forEach(ids, function (id) {
-        name = names[i];
+        var name = names[i];
         result.push({
             id: id,
             name: name
