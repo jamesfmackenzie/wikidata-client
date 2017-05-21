@@ -1,5 +1,5 @@
-# wikidata-service
-Service to query the Wikidata API and SPARQL interface
+# Wikidata Client
+Client to query the Wikidata API and SPARQL interface
 
 # Usage Examples
 
